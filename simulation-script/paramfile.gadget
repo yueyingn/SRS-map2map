@@ -1,0 +1,36 @@
+#  Relevant files
+InitCondFile = output/IC
+OutputDir = output
+OutputList = 0.090909091,0.125,0.2,0.25,0.3333333333,0.5,1
+
+Nmesh = 128
+# CPU time -limit
+
+TimeLimitCPU = 3600 #= 1 hour
+
+# Code options
+# Characteristics of run
+
+TimeMax = 1
+
+Omega0 = 0.2814      # Total matter density  (at z=0)
+OmegaLambda = 0.7186      # Cosmological constant (at z=0)
+OmegaBaryon = 0.0464     # Baryon density        (at z=0)
+HubbleParam = 0.697      # Hubble paramater (may be used for power spec parameterization)
+
+CoolingOn = 0
+StarformationOn = 0
+BlackHoleOn = 0
+HydroOn = 0
+DensityIndependentSphOn = 1
+MassiveNuLinRespOn = 0
+WindOn = 0
+
+# Accuracy of time integration
+MaxSizeTimestep = 0.1
+MinSizeTimestep = 0.00
+
+SnapshotWithFOF = 1
+FOFHaloLinkingLength = 0.2
+FOFHaloMinLength = 32
+
