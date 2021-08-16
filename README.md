@@ -15,7 +15,7 @@ For details of the model archetecture and training, check repository [map2map](h
 
 We use [MP-Gadget](https://github.com/MP-Gadget/MP-Gadget) to run cosmological simulation for the LR input. The input and output snapshots are stored in [bigfile](https://github.com/rainwoodman/bigfile) format.
 
-**Step 1** : Run a low-resolution N-body simulation. Our model is trained on LR sets with {Boxsize=100 Mpc/h, Ng_lr=64}. The test LR simulation should in the same resolution (e.g., Ng=128 with Boxsize=200 Mpc/h). In `scripts/LR-sim`, we provide the parameter files used to run LR simulation with [MP-Gadget](https://github.com/MP-Gadget/MP-Gadget).
+**Step 1** : Run a low-resolution N-body simulation. Our model is trained on LR sets with {Ng_lr=64, Boxsize=100 Mpc/h}. The test LR simulation should in the same resolution (e.g., {Ng_lr=128, Boxsize=200 Mpc/h}). In `scripts/LR-sim`, we provide the parameter files used to run LR simulation with [MP-Gadget](https://github.com/MP-Gadget/MP-Gadget).
 
 
 **Step 2** : `preproc.py` convert the snapshot of N-body simulation to a 3D image with 6 channels, in shape of `(Nc,Ng,Ng,Ng)`. Here `Nc=6` are the normalized displacement + velocity field of tracer particles arranged by their original grid. For usage, check `scripts/preproc.slurm` as an example job script. 
@@ -28,7 +28,7 @@ We use [MP-Gadget](https://github.com/MP-Gadget/MP-Gadget) to run cosmological s
 
 `lr2sr.py` assumes you use a GPU node. If you use a CPU node instead (which would be much slower), you might need to change `lr2sr.py#30` to `device = torch.device('cpu')`.
 
-Because the limitation of GPU memory, we chunk the LR input to pieces of `nsplit^3` for super resolution. You can set `nsplit` argument larger if out of GPU memory, but make sure that `nsplit` devides Ng_lr. 
+Because the limitation of GPU memory, we chunk the LR input to pieces of `nsplit^3` for SR operation. You can set the `nsplit` argument larger if out of GPU memory, but make sure that `nsplit` devides Ng_lr. 
 
 The models are trained on WMAP9 cosmology (see `scripts/LR-sim/paramfile.genic`). It might extraplate to other cosmologies, but this is not well calibrated yet.
 
