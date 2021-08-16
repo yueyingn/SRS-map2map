@@ -6,10 +6,10 @@ A trained super-resolution model for N-body cosmological simulation
 
 SR model super-resolves the N-body cosmological simulation. It generates 512 times more tracer particles and produces their full phase-space (displacment+velocity) distribution.
 
-SRmodel/G_z0.pt and G_z2.pt are the trained SR models to super-resolve the N-body cosmological simulation at z=2 and z=0 separately.  
+`SRmodel/G_z0.pt` and `SRmodel/G_z2.pt` are the trained SR models to super-resolve the N-body cosmological simulation at z=2 and z=0 separately.  
 They are the models used in [PaperII](https://doi.org/10.1093/mnras/stab2113)
 
-For details of the model archetecture and training, check repository [map2map](https://github.com/eelregit/map2map), also [PaperI](https://www.pnas.org/content/118/19/e2022038118) and [PaperII](https://doi.org/10.1093/mnras/stab2113).
+For details of the model archetecture and training, check repository [map2map](https://github.com/eelregit/map2map), also [Paper-I](https://www.pnas.org/content/118/19/e2022038118) and [Paper-II](https://doi.org/10.1093/mnras/stab2113).
 
 
 ## Usage
