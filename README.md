@@ -1,7 +1,7 @@
 # SRS-map2map
 A trained super-resolution model for N-body cosmological simulation
 
-![SR-image](https://github.com/yueyingn/SRS-map2map/SR-img)
+![SR-image](https://github.com/yueyingn/SRS-map2map/blob/main/SR-img.png)
 
 ## Model
 
