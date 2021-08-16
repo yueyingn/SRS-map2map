@@ -28,6 +28,8 @@ We use [MP-Gadget](https://github.com/MP-Gadget/MP-Gadget) to run cosmological s
 
 `lr2sr.py` assumes you use a GPU node. If you use a CPU node instead (which would be much slower), you might need to change `lr2sr.py#30` to `device = torch.device('cpu')`.
 
-Because the limitation of GPU memory, we chunk the LR input to pieces of `nsplit^3` for super resolution. You can set `nsplit` argument larger if output of GPU memory, but make sure that nsplit devides Ng_lr. 
+Because the limitation of GPU memory, we chunk the LR input to pieces of `nsplit^3` for super resolution. You can set `nsplit` argument larger if out of GPU memory, but make sure that `nsplit` devides Ng_lr. 
+
+The models are trained on WMAP9 cosmology (see `scripts/LR-sim/paramfile.genic`). It might extraplate to other cosmologies, but this is not well calibrated yet.
 
 
