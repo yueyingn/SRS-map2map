@@ -8,7 +8,7 @@
 
 hostname; pwd; date
 
-model_path="SRmodel/SRS_z0.pt"
+model_path="SRmodel/G_z0.pt"
 redshift=0 
 lr_input="catnorm.npy" # normalized LR input in shape Nc,Ng,Ng,Ng, with Nc=6
 sr_path="SR-output" # output directory of SR columns
