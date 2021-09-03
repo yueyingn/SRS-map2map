@@ -24,7 +24,7 @@ We use [MP-Gadget](https://github.com/MP-Gadget/MP-Gadget) to run cosmological s
 **Step 2** : `preproc.py` convert the snapshot of N-body simulation to a 3D image with 6 channels, in shape of `(Nc,Ng,Ng,Ng)`. Here `Nc=6` are the normalized displacement + velocity field of tracer particles arranged by their original grid. For usage, check `scripts/preproc.slurm` as an example job script. 
 
 
-**Step 3** : `lr2sr.py` use the trained SR mdoel to super-resolve the LR input and output the `Position` and `Velocity` column of 512 more tracer particles as the SR output. For usage, check `scripts/lr2sr.py` as an example job script. 
+**Step 3** : `lr2sr.py` use the trained SR mdoel to super-resolve the LR input and output the `Position` and `Velocity` column of 512 more tracer particles as the SR output. For usage, check `scripts/lr2sr.slurm` as an example job script. 
 
 
 ## Note
